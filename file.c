@@ -53,3 +53,49 @@ void* read(void *arg) {
 	
 }
 
+// reverses the string
+void *reverse(void *arg) {
+	string s;
+	string text;
+	ifstream in;
+	int i;
+	int size = text.length();
+	in.open("sample.txt");
+	if(in.is_open()) {
+		while(getline(in, text)) {
+			cout << text << endl;
+		}
+		for(int i = 0; i < (size) / 2; i++) {
+			swap(text[i], text[size - i - 1];
+			s[i] = text[i];
+		}
+		cout << s << endl;
+	}
+}
+
+// Main driver starts here
+int main() {
+	pthread_t t1, t2, t3;   // declaring the threads
+	int ret1, ret2, ret3;
+	ret1 = pthread_create(&t1, NULL, write, NULL);
+	if(ret1 != 0) {
+		cout << "Error making the thread.\n";
+	}
+	ret2 = pthread_create(&t2, NULL, read, NULL);
+	if(ret2 != 0) {
+		cout << "Error making the thread.\n";
+	}
+	ret3 = pthread_create(&t3, NULL, reverse, NULL);
+	if(ret3 != 0) {
+		cout << "Error making the thread.\n";
+	}
+	
+	// joining the threads
+	pthread_join(&t1, NULL);
+	pthread_join(&t2, NULL);
+	pthread_join(&t3, NULL);
+	
+	pthread_exit(NULL);   // exiting the thread system
+}
+
+
