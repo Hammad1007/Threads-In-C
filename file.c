@@ -90,7 +90,6 @@ int main() {
 	if(ret3 != 0) {
 		cout << "Error making the thread.\n";
 	}
-	
 	// joining the threads
 	pthread_join(&t1, NULL);
 	pthread_join(&t2, NULL);
