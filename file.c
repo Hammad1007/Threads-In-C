@@ -26,6 +26,7 @@ void* write(void* arg) {
 }
 
 // reads from the file
+// arg is basically the argument taken as command line argument
 void* read(void *arg) {
 	string s;
 	ifstream in;
@@ -50,10 +51,10 @@ void* read(void *arg) {
 		}
 		in.close();
 	}
-	
 }
 
 // reverses the string
+// sample.txt in the repository is just for testing purposes, it is not the file I dealt with
 void *reverse(void *arg) {
 	string s;
 	string text;
