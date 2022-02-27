@@ -9,7 +9,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <sys/wait.h>
-#include <cmath>
+#include <cmath>     // has math functions in it
 
 using namespace std;
 
