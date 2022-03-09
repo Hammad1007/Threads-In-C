@@ -91,9 +91,9 @@ int main() {
 		cout << "Error making the thread.\n";
 	}
 	// joining the threads
-	pthread_join(&t1, NULL);
-	pthread_join(&t2, NULL);
-	pthread_join(&t3, NULL);
+	pthread_join(&t1, NULL);  // join thread1
+	pthread_join(&t2, NULL);  // join thread2
+	pthread_join(&t3, NULL);  // join thread3
 	
 	pthread_exit(NULL);   // exiting the thread system
 }
