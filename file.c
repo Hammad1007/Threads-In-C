@@ -53,8 +53,7 @@ void* read(void *arg) {
 	}
 }
 
-// reverses the string
-// sample.txt in the repository is just for testing purposes, it is not the file I dealt with
+// reverses the string sample.txt in the repository is just for testing purposes, it is not the file I dealt with
 void *reverse(void *arg) {
 	string s;
 	string text;
