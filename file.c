@@ -60,7 +60,7 @@ void *reverse(void *arg) {
 	ifstream in;
 	int i;
 	int size = text.length();
-	in.open("sample.txt");
+	in.open("sample.txt");	// filing
 	if(in.is_open()) {
 		while(getline(in, text)) {
 			cout << text << endl;
